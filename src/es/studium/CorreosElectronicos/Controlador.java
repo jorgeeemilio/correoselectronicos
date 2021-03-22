@@ -71,6 +71,7 @@ public class Controlador implements WindowListener, ActionListener
 					}
 					vista.txaResultados.append("\n");
 				}
+				vista.lblMensaje.setText("Proceso finalizado");
 				//Cerrar el objeto entrada
 				entrada.close();
 				fr.close();
