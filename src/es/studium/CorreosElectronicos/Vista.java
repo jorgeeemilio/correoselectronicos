@@ -11,8 +11,9 @@ import java.awt.TextField;
 public class Vista
 {
 	Frame ventana = new Frame("Correos Electrónicos");
-	TextField txtRuta = new TextField(20);
+	TextField txtFuente = new TextField(20);
 	Button btnAnalizar = new Button("Analizar");
+	TextField txtDestino = new TextField(20);
 	TextArea txaResultados = new TextArea(20,25);
 	
 	Dialog dlgMensaje = new Dialog(ventana, "Mensaje", true);
@@ -22,14 +23,15 @@ public class Vista
 	{
 		ventana.setLayout(new FlowLayout());
 		
-		ventana.add(txtRuta);
+		ventana.add(txtFuente);
 		ventana.add(btnAnalizar);
+		ventana.add(txtDestino);
 		ventana.add(txaResultados);
 		
 		ventana.setSize(220,440);
 		ventana.setResizable(false);
 		ventana.setLocationRelativeTo(null);
-		txtRuta.requestFocus();
+		txtFuente.requestFocus();
 		ventana.setVisible(true);
 		
 		dlgMensaje.setLayout(new FlowLayout());
